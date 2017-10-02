@@ -8,4 +8,28 @@
     <!-- 设置页面主题为简单主题，去掉struts2开发提供的样式 -->
     <constant name="struts.ui.theme" value="simple" />
 
+	<package name="default" namespace="/"  extends="struts-default">
+	
+		<!-- 拦截器配置 -->
+		<interceptors>
+			<interceptor name="loginInterceptor" class="com.jiem.activiti.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="systemStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 定义系统默认拦截器 全局 -->
+		<default-interceptor-ref name="systemStack" /> 
+		
+		<global-results>
+			<result name="login" type="redirect">login.jsp</result>
+		</global-results>
+		
+		<action name="loginAction_*" class="com.jiem.activiti.web.LoginAction" method="{1}">
+			<result name="success">WEB-INF/views/main.jsp</result>
+        	<result name="top">WEB-INF/views/top.jsp</result>
+        	<result name="left">WEB-INF/views/left.jsp</result>
+        	<result name="welcome">WEB-INF/views/welcome.jsp</result>
+		</action>
+	</package>
 </struts>
