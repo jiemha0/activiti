@@ -8,8 +8,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
  <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
    <!-- 配置数据库连接 -->
  <property name="jdbcDriver" value="com.mysql.jdbc.Driver"></property>
- <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/activiti?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf8"></property>
- <property name="jdbcUsername" value="jien"></property>
+ <property name="jdbcUrl" value="jdbc:mysql:///activiti?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf8"></property>
+ <property name="jdbcUsername" value="jiem"></property>
  <property name="jdbcPassword" value="jiem"></property>
  
   <!-- 配置创建表策略 :没有表时，自动创建 -->

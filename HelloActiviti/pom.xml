@@ -6,11 +6,10 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>这是我学习的activiti例子</name>
+
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<activiti-version>5.14</activiti-version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.activiti</groupId>
@@ -28,9 +27,9 @@
 			<version>2.0.4</version>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.3.168</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.37</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
