@@ -1,9 +1,0 @@
-/com
-/activiti-context.xml
-/applicationContext-action.xml
-/applicationContext-dao.xml
-/applicationContext-service.xml
-/applicationContext.xml
-/db.properties
-/log4j.properties
-/struts.xml
